@@ -3,9 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Retrospect-Academy</title>
+    <style>
+        /* Top Menu Styling */
+        .TopMenu {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 0 20px;
+            height: 75px;
+        }
+        .Logo {
+            width: 50px;
+            height: auto;
+            border: 2px solid black;
+        }
+        .head {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Button container styling */
+        .button-container {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .Register {
+            background-color: white;
+            cursor: pointer;
+            padding: 5px 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: medium;
+        }
+        .Register:hover {
+            background-color: red;
+            color: white;
+        }
+
+        /* Main Layout */
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 40px;
+            flex-wrap: wrap;
+            position: relative;
+            margin-top: 300px;
+        }
+
+        .college, .Content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 450px; 
+            height: 80px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            opacity: 0.9;
+        }
+
+        /* College (Left Block) */
+        .college {
+            flex-direction: column;
+            gap: 10px;
+            margin-right: 60px;
+        }   
+
+        /* Dropdown styling */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .dropdown-btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Content (Right Block) */
+        .Content {
+            flex-direction: column;
+            gap: 20px;
+            margin-right: 40px;
+        }
+
+        /* Flex Container for Centering */
+        .info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px; 
+            padding: 10px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Styling for Inline Selects */
+        .select-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        label {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .select-dropdown {
+            width: 180px;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            text-align-last: center;
+            -moz-text-align-last: center;
+            opacity: 0.5;
+        }
+
+        .bgimage {
+            background-image: url("/UID_Project/Rectrospect-Academy/Resource/College3.jpg");
+            background-color: black;
+            background-size: 100% 100%; 
+            background-position: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 930px;
+            position: relative;
+        }
+
+        .inpage-title {
+            color: #00CED1; /* Dark Turquoise */
+            font-family: Helvetica Neue, Inter, sans-serif;
+            font-size: 50px;
+            font-weight: 300;
+            letter-spacing: 0.025em;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5); /* Soft white shadow */
+        }
+
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Search Button Styling */
+        .search-btn {
+            width: 200px;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .search-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Updated submit container */
+        .submit-container {
+            position: absolute;
+            bottom: 10%; /* Moved further down */
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .gapbtw{
+            width: 70px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="TopMenu">
+        <img class="Logo" src="./Resource/logo.jpg" alt="Logo">
+        <div class="head">Retrospect Academy</div>
+        <div class="button-container">
+            <button class="Register">About Us</button>
+            <button class="Register">Register</button>
+        </div>
+    </div>
+    <div class="bgimage">
+        <div class="text">
+            <div class="inpage-title">
+                Find college of your choice with 
+            </div>
+            <div class="inpage-title"> 
+                Retrospect-Academy
+            </div>
+        </div>
+        <div class="main-container">
+            <!-- College Section on the Left -->
+            <div class="college">
+                <div class="dropdown">
+                    <button class="dropdown-btn">Select Option</button>
+                    <div class="dropdown-content">
+                        <a href="/UID_Project/Rectrospect-Academy/Drop-Down-Menu/Amrita_University/Drop_Amrita.html">Amritha University</a>
+                        <a href="group1/subgroup1B.html">Birla Institute of Technology</a>
+                        <a href="group1/subgroup1C.html">IIT's</a>
+                        <a href="group1/subgroup1D.html">NIT's</a>
+                        <a href="group1/subgroup1E.html">IIIT's</a>
+                    </div>
+                </div>
+            </div>
+            <div class="gapbtw"></div>
+            <!-- Content Section on the Right -->
+            <div class="Content">
+                <div class="info">
+                    <div class="select-container">
+                        <label for="branch">Branch</label>
+                        <select id="branch" class="select-dropdown">
+                            <option value="Default">Select-Type</option>
+                            <option value="cse">CSE</option>
+                            <option value="ece">ECE</option>
+                            <option value="eee">EEE</option>
+                            <option value="mech">Mechanical</option>
+                            <option value="civil">Civil</option>
+                        </select>
+                    </div>
+
+                    <div class="select-container">
+                        <label for="year">Year</label>
+                        <select id="year" class="select-dropdown">
+                            <option value="Default">Select-Year</option>
+                            <option value="1">First</option>
+                            <option value="2">Second</option>
+                            <option value="3">Third</option>
+                            <option value="4">Fourth</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="submit-container">
+            <button class="search-btn">Search</button>
+        </div>
+    </div>
 </body>
 </html>
