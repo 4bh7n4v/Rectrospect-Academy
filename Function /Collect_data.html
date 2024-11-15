@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Details Form</title>
+    <style>
+        .container {
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 2%;
+            width: 100%;
+            max-width: 550px;
+            background-color: aliceblue;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .upload-preview {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+            font-size: 14px;
+            color: #666;
+        }
+        .upload-preview::before {
+            content: "Upload Image Preview";
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        h2{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size:xx-large;
+            
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            border-radius: 5%;
+            background-color: #667eea;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #764ba2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Account-Details">
+            <h2>Account Details</h2>
+            <p>Please fill in your college details</p>
+        </div>
+        <div class="form-group">
+            <label for="Profile">Upload Profile Pic</label>
+            <div class="upload-preview"></div>
+            <input type="file" id="Profile" name="Pic" accept="image/*">
+        </div>
+        <div class="form-group">
+            <label for="CollegeName">College Name</label>
+            <input type="text" id="Cname" name="College" placeholder="Enter College Name" required>
+        </div>
+        <div class="form-group">
+            <label for="Location">Enter Location</label>
+            <input type="text" id="Location" name="Location" placeholder="Enter College Location" required>
+        </div>
+        <div class="form-group">
+            <label for="Picture">College Photos</label>
+            <input type="file" id="College-img" name="Image" accept="image/*">
+        </div>
+        <div class="form-group">
+            <label for="Branch">Branch Name</label>
+            <input type="text" id="Branch" name="Branch" placeholder="Enter Branch">
+        </div>
+        <div class="Submit">
+            <button><a href="/index.html">Submit</a></button>
+
+        </div>
+    </div>
+</body>
+</html>

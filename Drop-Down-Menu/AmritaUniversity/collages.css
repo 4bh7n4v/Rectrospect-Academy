@@ -19,7 +19,7 @@ body {
 }
 
 .college-card {
-    background-color: #ffffff;
+    background-color:rgba(238, 229, 229, 0.774);
     border: 1px solid black;
     border-radius: 8px;
     overflow: hidden;
@@ -30,7 +30,7 @@ body {
 }
 
 .college-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .college-card img {

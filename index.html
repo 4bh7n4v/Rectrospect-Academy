@@ -171,7 +171,7 @@
         }
 
         .bgimage {
-            background-image: url("/UID_Project/Rectrospect-Academy/Resource/College3.jpg");
+            background-image: url("/Resources/College3.jpg");
             background-color: black;
             background-size: 100% 100%; 
             background-position: center;
@@ -226,15 +226,65 @@
         .gapbtw{
             width: 70px;
         }
+        .Bottom-container {
+            display: flex;
+           
+            
+        }
+
+        .left, .Right {
+            width: 45%;
+        }
+
+        .left {
+            text-align: center;
+            margin-left: 200px;
+            margin-top:100px;
+        }
+        .Right{
+            margin-right: 200px;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+        li,.left{
+            font-size: x-large;
+        }
+        .Bottom{
+            background-color: #007bff;
+            margin: auto;
+        }
+        .Bottom h1,h3,li{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+
+        }
+        .Work h1{
+            text-align: center;
+        }
+        .data img{
+            width: 400px;
+            border: 2px solid black;
+            
+        }
+        .data{
+            text-align: center;
+            padding: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
     </style>
 </head>
 <body>
     <div class="TopMenu">
-        <img class="Logo" src="./Resource/logo.jpg" alt="Logo">
+        <img class="Logo" src="./Resources/logo.jpg" alt="Logo">
+        
         <div class="head">Retrospect Academy</div>
         <div class="button-container">
-            <button class="Register">About Us</button>
-            <button class="Register">Register</button>
+            <button class="Register"><a href="./Function/User-or-Student.html">SignUp</a></button>
         </div>
     </div>
     <div class="bgimage">
@@ -252,11 +302,11 @@
                 <div class="dropdown">
                     <button class="dropdown-btn">Select Option</button>
                     <div class="dropdown-content">
-                        <a href="/UID_Project/Rectrospect-Academy/Drop-Down-Menu/Amrita_University/Drop_Amrita.html">Amritha University</a>
-                        <a href="group1/subgroup1B.html">Birla Institute of Technology</a>
-                        <a href="group1/subgroup1C.html">IIT's</a>
-                        <a href="group1/subgroup1D.html">NIT's</a>
-                        <a href="group1/subgroup1E.html">IIIT's</a>
+                        <a href="/Drop-Down-Menu/AmritaUniversity/index.html">Amrita University</a>
+                        <a href="\Drop-Down-Menu\Birla Institute of Technology\index.html">Birla Institute of Technology</a>
+                        <a href="\Drop-Down-Menu\IIT\index.html">IIT's</a>
+                        <a href="\Drop-Down-Menu\NIT\index.html">NIT's</a>
+                        <a href="\Drop-Down-Menu\IIIT\Index.html">IIIT's</a>
                     </div>
                 </div>
             </div>
@@ -295,5 +345,33 @@
             <button class="search-btn">Search</button>
         </div>
     </div>
+    <div class="Bottom">
+        <div class="Work">
+            <h1>How does Restraspect-Academy Work?</h1>
+            <div class="Bottom-container">
+                <h3 class="left">
+                    CollegeMate is a platform wherein you can connect with the students from the college you want to join.
+                    Get all your questions answered here.
+                </h3>
+                <h3 class="Right">
+                    <ul>
+                        <li>Choose a college, branch and other options and search</li>
+                        <li>Check for Campus and Student Details</li>
+                        <li>Select a college representative and book an appointment</li>
+                        <li>Have an interactive one-on-one session</li>
+                    </ul>
+                </h3>
+            </div>
+            <hr style="border: 2px solid black; width: 75%;">
+
+            <div class="data">
+                <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: xx-large;">How Restraspect-Academy works</h3>
+               <img src="./Resources/Data-link.jpg" alt="Data-link">
+               
+            </div>
+            
+        </div>
+    </div>
+    
 </body>
 </html>
