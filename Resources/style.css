@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: linear-gradient(to right, #00c6ff, #1e7df2);
+    height: 100vh;
+    color: #333;
+}
+
+.college-overview {
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 150px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid green;
+}
+
+.title h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.rating {
+    font-size: 16px;
+    color: #666;
+}
+
+.stars {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.description {
+    margin: 15px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Stats and Image Section */
+.stats-image {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.stat-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+    max-width: 200px;
+}
+
+.stat-item .label {
+    font-size: 14px;
+    color: #555;
+}
+
+.stat-item .value {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.college-image img {
+    width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color:lightgrey;
+}
+
+.location-icon {
+    color: #81131d; /* Red color for the location icon */
+    font-size: 18px;
+}
+
+.location-text {
+    color: #007bff; /* Blue color for the text */
+    font-weight: bold;
+}
+
+/* Reviews Section Container */
+.reviews-section {
+    width: 80%;
+    max-width: 900px;
+    background:burlywood;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Review Card */
+.review-card {
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: gainsboro;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Hover Effect for Cards */
+.review-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Student Name Styling */
+.student-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Batch Year Styling */
+.review-year {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Review Text Styling */
+.review-text {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.student-name img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+    margin-right: 10px;}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
