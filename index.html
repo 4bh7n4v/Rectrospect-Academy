@@ -30,6 +30,7 @@
             display: flex;
             gap: 10px;
             justify-content: flex-end;
+            flex-wrap: nowrap;
         }
 
         .Register {
@@ -52,22 +53,9 @@
             align-items: center;
             gap: 20px;
             padding: 40px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             position: relative;
-            margin-top: 300px;
-        }
-
-        .college, .Content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            width: 450px; 
-            height: 80px;
-            background-color: #f9f9f9;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            opacity: 0.9;
+            margin-top: 200px;
         }
 
         /* College (Left Block) */
@@ -83,6 +71,7 @@
             display: inline-block;
             width: 100%;
             text-align: center;
+            margin:auto;
         }
 
         .dropdown-btn {
@@ -135,12 +124,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px; 
-            padding: 10px;
+            gap: 40px;
+            padding-bottom: 10px; 
             margin: 0 auto;
             border: 1px solid #ddd;
             border-radius: 5px;
+            width: 390px; /* Default width */
+            height: 80px; /* Default height */
+            min-width: 300px; /* Minimum width */
+            min-height: 60px;
             text-align: center;
+            flex-wrap: nowrap;
+            background-color: white;
         }
 
         /* Styling for Inline Selects */
@@ -148,6 +143,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 200px; /* Fixed width for the container */
             margin: 0 10px;
             text-align: center;
         }
@@ -159,7 +155,7 @@
         }
 
         .select-dropdown {
-            width: 180px;
+            width: 150px; /* Set a fixed width */
             padding: 12px;
             font-size: 16px;
             border: 1px solid #ccc;
@@ -171,22 +167,21 @@
         }
 
         .bgimage {
-            background-image: url("/Resources/College3.jpg");
+            background-image: url("./Resources/collegematebg.png");
             background-color: black;
             background-size: 100% 100%; 
             background-position: center;
             margin: 0;
             font-family: Arial, sans-serif;
-            height: 930px;
+            height: 850px;
             position: relative;
         }
 
         .inpage-title {
-            color: #00CED1; /* Dark Turquoise */
-            font-family: Helvetica Neue, Inter, sans-serif;
-            font-size: 50px;
-            font-weight: 300;
-            letter-spacing: 0.025em;
+            color: #2d4aea; /* Dark Turquoise */
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 10px;
+            font-size: 40px;
             text-align: center;
             text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5); /* Soft white shadow */
         }
@@ -217,19 +212,56 @@
         /* Updated submit container */
         .submit-container {
             position: absolute;
-            bottom: 10%; /* Moved further down */
+            bottom: 20%;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
         }
+        .college {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-right: 60px;
+            padding: 20px;
+            width: 450px; /* Default width */
+            height: 125px; /* Default height */
+            min-width: 300px; 
+            min-height: 60px; 
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            opacity: 0.9;
 
-        .gapbtw{
-            width: 70px;
+            /* Allow shrinking within limits */
+            flex-shrink: 1; 
+            box-sizing: border-box; 
+        }
+        .Content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            width: 400px; /* Default width */
+            height: 80px; /* Default height */
+            min-width: 400px; /* Minimum width */
+            min-height: 60px; /* Minimum height */
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            opacity: 0.9;
+
+            /* Allow shrinking within limits */
+            flex-shrink: 1;
+            
+            }
+
+
+        .gapbtw {
+            width: 50px;
         }
         .Bottom-container {
             display: flex;
-           
-            
+            flex-wrap: nowrap; /* Prevent wrapping */
         }
 
         .left, .Right {
@@ -239,40 +271,38 @@
         .left {
             text-align: center;
             margin-left: 200px;
-            margin-top:100px;
+            margin-top: 100px;
         }
-        .Right{
+        .Right {
             margin-right: 200px;
         }
 
         ul {
             list-style-type: disc;
         }
-        li,.left{
+        li, .left {
             font-size: x-large;
         }
-        .Bottom{
+        .Bottom {
             background-color: #007bff;
-            margin: auto;
         }
-        .Bottom h1,h3,li{
+        .Bottom h1, h3, li {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            
-
         }
-        .Work h1{
+        .Work h1 {
             text-align: center;
+            margin-top: 1px;
+            padding: 20px;
         }
-        .data img{
+        .data img {
             width: 400px;
             border: 2px solid black;
-            
         }
-        .data{
+        .data {
             text-align: center;
             padding: 20px;
         }
-        a{
+        a {
             text-decoration: none;
             color: black;
         }
@@ -281,7 +311,6 @@
 <body>
     <div class="TopMenu">
         <img class="Logo" src="./Resources/logo.jpg" alt="Logo">
-        
         <div class="head">Retrospect Academy</div>
         <div class="button-container">
             <button class="Register"><a href="./Function/User-or-Student.html">SignUp</a></button>
@@ -289,12 +318,8 @@
     </div>
     <div class="bgimage">
         <div class="text">
-            <div class="inpage-title">
-                Find college of your choice with 
-            </div>
-            <div class="inpage-title"> 
-                Retrospect-Academy
-            </div>
+            <div class="inpage-title">Discover the college of your dreams with</div>
+            <div class="inpage-title">Retrospect-Academy</div>
         </div>
         <div class="main-container">
             <!-- College Section on the Left -->
@@ -302,11 +327,11 @@
                 <div class="dropdown">
                     <button class="dropdown-btn">Select Option</button>
                     <div class="dropdown-content">
-                        <a href="/Drop-Down-Menu/AmritaUniversity/index.html">Amrita University</a>
-                        <a href="\Drop-Down-Menu\Birla Institute of Technology\index.html">Birla Institute of Technology</a>
-                        <a href="\Drop-Down-Menu\IIT\index.html">IIT's</a>
-                        <a href="\Drop-Down-Menu\NIT\index.html">NIT's</a>
-                        <a href="\Drop-Down-Menu\IIIT\Index.html">IIIT's</a>
+                        <a href="./Drop-Down-Menu/AmritaUniversity/index.html">Amrita University</a>
+                        <a href="./Drop-Down-Menu/Birla Institute of Technology/index.html">Birla Institute of Technology</a>
+                        <a href="./Drop-Down-Menu/IIT/index.html">IIT's</a>
+                        <a href="./Drop-Down-Menu/NIT/index.html">NIT's</a>
+                        <a href="./Drop-Down-Menu/IIIT/Index.html">IIIT's</a>
                     </div>
                 </div>
             </div>
@@ -323,9 +348,9 @@
                             <option value="eee">EEE</option>
                             <option value="mech">Mechanical</option>
                             <option value="civil">Civil</option>
+                            <option value="ai">AI/ML</option>
                         </select>
                     </div>
-
                     <div class="select-container">
                         <label for="year">Year</label>
                         <select id="year" class="select-dropdown">
@@ -339,8 +364,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Submit Button -->
         <div class="submit-container">
             <button class="search-btn">Search</button>
         </div>
@@ -372,6 +395,5 @@
             
         </div>
     </div>
-    
 </body>
 </html>
