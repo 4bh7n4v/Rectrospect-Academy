@@ -10,7 +10,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             align-items: center;
-            background-color: #f0f0f0;
+            background-color: whitesmoke;
             padding: 0 20px;
             height: 75px;
         }
@@ -33,7 +33,7 @@
             flex-wrap: nowrap;
         }
 
-        .Register {
+        .Register,.AboutUs {
             background-color: white;
             cursor: pointer;
             padding: 5px 10px;
@@ -41,9 +41,9 @@
             border-radius: 5px;
             font-size: medium;
         }
-        .Register:hover {
-            background-color: red;
-            color: white;
+        .Register:hover,.AboutUs:hover {
+            background-color: rgb(40, 140, 222);
+            text-decoration: dashed;
         }
 
         /* Main Layout */
@@ -311,8 +311,9 @@
 <body>
     <div class="TopMenu">
         <a href="./index.html"><img class="Logo" src="./Resources/rectro-logo.jpg" alt="Logo" ></a>
-        <div class="head">Retrospect Academy</div>
+        <div class="head">Rectrospect Academy</div>
         <div class="button-container">
+            <button class="AboutUs"><a href="./Function/AboutUs.html">About Us</a></button>
             <button class="Register"><a href="./Function/User-or-Student.html">SignUp</a></button>
         </div>
     </div>
