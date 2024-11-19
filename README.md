@@ -6,7 +6,9 @@ The Rextrospect Academy also provide students to share there experience in the r
 ## Usage
 1. Clone the Repository for view Current process
    Open Terminal
-  `git clone https://github.com/4bh7n4v/Rectrospect-Academy/`
-2. Open The Directory with anu ide such as Vscode 
-    move to the pwd i.e Rectrospect Academy 
+
+   `git clone https://github.com/4bh7n4v/Rectrospect-Academy/`
+3. Open The Directory with anu ide such as Vscode 
+  move to the pwd i.e Rectrospect Academy
+    
     `And run the code with live server at index.html`
