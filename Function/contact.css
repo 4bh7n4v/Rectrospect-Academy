@@ -19,8 +19,34 @@ body {
     color: white;
     text-align: center;
     padding: 4rem 2rem;
+    height: 200px;
+}
+.TopMenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 0 20px;
+    height: 75px;
+}
+.Logo {
+    width: 50px;
+    height: auto;
+    border: 2px solid black;
+}
+.head {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
 }
 
+/* Button container styling */
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
 .contact-header h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -136,4 +162,8 @@ footer {
     color: white;
     font-size: 0.9rem;
     margin-top: 2rem;
+}
+a {
+    text-decoration: none;
+    color: black;
 }

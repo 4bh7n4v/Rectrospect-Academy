@@ -4,7 +4,32 @@ body, h1, h2, h3, p, footer {
     padding: 0;
     box-sizing: border-box;
 }
+.TopMenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 0 20px;
+    height: 75px;
+}
+.Logo {
+    width: 50px;
+    height: auto;
+    border: 2px solid black;
+}
+.head {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
 
+/* Button container styling */
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -139,4 +164,8 @@ footer {
     text-align: center;
     padding: 1rem 0;
     font-size: 0.9rem;
+}
+a {
+    text-decoration: none;
+    color: black;
 }
