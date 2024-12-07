@@ -13,105 +13,40 @@
             align-items: center;
             padding: 20px;
         }
-        .container {
-            text-align: center;
-            border: 2px solid black;
-            border-radius: 2%;
-            width: 100%;
-            max-width: 550px;
-            background-color: aliceblue;
-            padding: 20px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .form-group {
-            margin-bottom: 15px;
-            text-align: left;
-            padding: 10px;
-            padding-right: 20px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .Name {
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-        }
-        .Name .form-group {
-            flex: 1;
-            padding: 10px;
-        }
-        .password-info {
-            font-size: 0.9rem;
-            color: #555;
-            text-align: center;
-            margin-left: 30px;
-            margin-right: 30px;
-        }
-        button {
-            background-color: #667eea;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        button:hover {
-            background-color: #764ba2;
-        }
-        a{
-            text-decoration: none;
-            color: azure;
-        }
-        .SignIn a{
-            color: #000;
-        }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
-        <div class="logo">
+        <div class="card p-4">
+        <div class="text-center">
             <img src="../Resources/rectro-logo.jpg" alt="logo">
         </div>
-        <div>
+        <div class="text-center">
             <h2>Create Account</h2>
             <p>Please fill in your details to get started</p>
         </div>
         <form>
-            <div class="Name">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name" required>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name" required>
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Create a Password" required>
+                    <p class="password-info">Password must be at least 8 characters long with numbers, letters, and special characters.</p>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Confirm Your Password" required><br>
                 </div>
                 <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
+                    <button class="btn btn-primary  w-100 mb-3"><a class="text-black text-decoration-none" href="./Collect_data.html">Sign Up</a></button>
+                    <p>Already had an account ? <a class="text-decoration-none" href="./login.html">Sign In</a></p>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Create a Password" required>
-                <p class="password-info">Password must be at least 8 characters long with numbers, letters, and special characters.</p>
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="password" name="password" placeholder="Confirm Your Password" required>
-            </div>
-            <button type="submit"><a href="./Collect_data.html">Sign Up</a></button>
-            <div class="SignIn">
-                <p class="SignIn-Info">Already had an account ? <a href="./login.html">Sign In</a></p>
-            </div>
         </form>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
