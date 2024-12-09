@@ -4,75 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="About.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css">
+
 </head>
 <body>
-    <div class="TopMenu">
-        <a href="../index.html"><img class="Logo" src="../Resources/rectro-logo.jpg" alt="Logo" ></a>
-        <div class="head">Rectrospect Academy</div>
-        <div class="button-container">
-            <button class="Contact"><a href="../Function/contact.html">Contact</a></button>
-            <button class="AboutUs"><a href="../Function/AboutUs.html">About Us</a></button>
-            <button class="Register"><a href="../Function/User-or-Student.html">SignUp</a></button>
+
+
+    <div class="container-fluid bg-light py-2">
+        <div class="row align-items-center">
+            <!-- Logo Section -->
+            <div class="col-auto">
+                <a href="../index.html">
+                    <img class="img-fluid border border-dark" src="../Resources/rectro-logo.jpg" alt="Logo" style="width: 50px;">
+                </a>
+            </div>
+    
+            <!-- Heading Section -->
+            <div class="col text-center">
+                <div class="h4 font-weight-bold text-center">Rectrospect Academy</div>
+            </div>
+    
+            <!-- Buttons Section -->
+            <div class="col-auto">
+                <div class="d-flex gap-2">
+                    <a href="../Function/contact.html" class="btn btn-outline-dark">Contact Us</a>
+                    <a href="../Function/AboutUs.html" class="btn btn-outline-dark">About Us</a>
+                    <a href="../Function/User-or-Student.html" class="btn btn-outline-dark">SignUp</a>
+                </div>
+            </div>
         </div>
     </div>
-    <header class="hero">
-        <div class="hero-content">
-            <h1>About Us</h1>
-            <p>Your trusted partner in finding the perfect college.</p>
+    
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">About Us</h1>
+            <p class="lead">Your trusted partner in finding the perfect college.</p>
         </div>
     </header>
+    
     <main>
-        <section class="about">
-            <div class="about-text">
-                <h2>Who We Are</h2>
-                <p>
-                    At Rectrospect Academy, we are committed to providing students with accurate, transparent, and 
-                    unbiased reviews about colleges worldwide. Our goal is to simplify your decision-making 
-                    process by offering real experiences and insights that matter most to you Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores alias, ea, officiis neque quaerat officia quia consequatur temporibus veritatis dolores, optio ex minus porro nulla. At harum quasi dicta repellat..
+        <!-- About Section -->
+        <section class="py-5 text-center">
+            <div class="container">
+                <h2 class="text-primary">Who We Are</h2>
+                <p class="text-secondary mt-3 mx-auto" style="max-width: 800px;">
+                    At Rectrospect Academy, we are committed to providing students with accurate, transparent, and unbiased reviews about colleges worldwide. Our goal is to simplify your decision-making process by offering real experiences and insights that matter most to you Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores alias, ea, officiis neque quaerat officia quia consequatur temporibus veritatis dolores, optio ex minus porro nulla. At harum quasi dicta repellat.
                 </p>
             </div>
         </section>
-        <section class="values">
-            <h2>Our Values</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Transparency</h3>
-                    <p>We ensure all reviews are honest and authentic.</p>
-                </div>
-                <div class="card">
-                    <h3>Community</h3>
-                    <p>We believe in empowering students to share and learn from each other.</p>
-                </div>
-                <div class="card">
-                    <h3>Excellence</h3>
-                    <p>We strive to provide the best tools and resources for your success.</p>
+        
+        <!-- Values Section -->
+        <section class="bg-light py-5">
+            <div class="container text-center">
+                <h2 class="text-primary mb-4">Our Values</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm p-3">
+                            <h3 class="text-primary">Transparency</h3>
+                            <p>We ensure all reviews are honest and authentic.nf  hry rn rfnne.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm p-3">
+                            <h3 class="text-primary">Community</h3>
+                            <p>We believe in empowering students to share and learn from each other.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm p-3">
+                            <h3 class="text-primary">Excellence</h3>
+                            <p>We strive to provide the best tools and resources for your success.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="team">
-            <h2>Meet the Team</h2>
-            <div class="team-members">
-                <div class="member">
-                    <img src="../Resources/Abhinav.jpg" alt="Team Member 1">
-                    <h3>Abhinav Pasunuri</h3>
-                    <p>Founder & CEO</p>
-                </div>
-                <div class="member">
-                    <img src="../Resources/Charan.jpg" alt="Team Member 2">
-                    <h3>Sri charan</h3>
-                    <p>Content Manager</p>
-                </div>
-                <div class="member">
-                    <img src="../Resources/Richu.jpg" alt="Team Member 3">
-                    <h3>Richu james</h3>
-                    <p>Co-Founder</p>
+        
+        <!-- Team Section -->
+        <section class="py-5 text-center">
+            <div class="container">
+                <h2 class="text-primary mb-4">Meet the Team</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <img src="Abhinav.jpg" alt="Team Member 1" class="rounded-circle border shadow-sm mb-3" width="150" height="150">
+                            <h3 class="h5">Abhinav Pasunuri</h3>
+                            <p class="text-muted">Founder & CEO</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <img src="Charan.jpg" alt="Team Member 2" class="rounded-circle border shadow-sm mb-3" width="150" height="150">
+                            <h3 class="h5">Sri Charan</h3>
+                            <p class="text-muted">Content Manager</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <img src="Richu.jpg" alt="Team Member 3" class="rounded-circle border shadow-sm mb-3" width="150" height="150">
+                            <h3 class="h5">Richu James</h3>
+                            <p class="text-muted">Co-Founder</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Rectrospect Academy. All Rights Reserved.</p>
+    
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+        <p class="mb-0">&copy; 2024 Rectrospect Academy. All Rights Reserved.</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

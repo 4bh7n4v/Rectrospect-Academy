@@ -4,57 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="TopMenu">
-        <a href="../index.html"><img class="Logo" src="../Resources/rectro-logo.jpg" alt="Logo" ></a>
-        <div class="head">Rectrospect Academy</div>
-        <div class="button-container">
-            <button class="Contact"><a href="../Function/contact.html">Contact</a></button>
-            <button class="AboutUs"><a href="../Function/AboutUs.html">About Us</a></button>
-            <button class="Register"><a href="../Function/User-or-Student.html">SignUp</a></button>
+
+    <div class="container-fluid bg-light py-2">
+        <div class="row align-items-center">
+            <!-- Logo Section -->
+            <div class="col-auto">
+                <a href="../index.html">
+                    <img class="img-fluid border border-dark" src="../Resources/rectro-logo.jpg" alt="Logo" style="width: 50px;">
+                </a>
+            </div>
+    
+            <!-- Heading Section -->
+            <div class="col text-center">
+                <div class="h4 font-weight-bold text-center">Rectrospect Academy</div>
+            </div>
+    
+            <!-- Buttons Section -->
+            <div class="col-auto">
+                <div class="d-flex gap-2">
+                    <a href="../Function/contact.html" class="btn btn-outline-dark">Contact Us</a>
+                    <a href="../Function/AboutUs.html" class="btn btn-outline-dark">About Us</a>
+                    <a href="../Function/User-or-Student.html" class="btn btn-outline-dark">SignUp</a>
+                </div>
+            </div>
         </div>
     </div>
-    <header class="contact-header">
-        <h1>Contact Us</h1>
-        <p>We'd love to hear from you! Reach out with any questions or feedback.</p>
+    
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">Contact Us</h1>
+        <p class="lead">We'd love to hear from you! Reach out with any questions or feedback.</p>
     </header>
-    <main class="contact-container">
-        <section class="contact-info">
-            <h2>Get in Touch</h2>
-            <p><strong>Email:</strong> support@Rectrospect_Academy.com</p>
-            <p><strong>Phone:</strong> +91 (800) 123-4567</p>
-            <p><strong>Address:</strong> Amritapuri ,Kollam, Kerala</p>
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-                <a href="#"><img src="../Resources/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="../Resources/twitter.webp" alt="Twitter"></a>
-                <a href="#"><img src="../Resources/linkedin.png" alt="LinkedIn"></a>
-            </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7278.923368572389!2d76.49113888627048!3d9.09361627123197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0602e7b4a2049d%3A0x3af3246b5138db0f!2sAmrita%20Vishwa%20Vidyapeetham%2C%20Amritapuri!5e0!3m2!1sen!2sin!4v1732611901970!5m2!1sen!2sin" width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-        <section class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form>
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <main class="container my-5">
+        <div class="row g-4">
+            <!-- Contact Info -->
+            <section class="col-lg-6">
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-primary">Get in Touch</h2>
+                    <p><strong>Email:</strong> support@Rectrospect_Academy.com</p>
+                    <p><strong>Phone:</strong> +91 9182937352</p>
+                    <p><strong>Address:</strong> Amritapuri, Kollam, Kerala</p>
+                    <h3 class="text-primary mt-4">Follow Us</h3>
+                    <div class="d-flex align-items-center mb-3">
+                        <a href="#" class="me-2"><img src="../Resources/facebook.png" alt="Facebook" class="img-fluid" width="30"></a>
+                        <a href="#" class="me-2"><img src="../Resources/twitter.webp" alt="Twitter" class="img-fluid" width="30"></a>
+                        <a href="#"><img src="../Resources/linkedin.png" alt="LinkedIn" class="img-fluid" width="30"></a>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7278.923368572389!2d76.49113888627048!3d9.09361627123197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0602e7b4a2049d%3A0x3af3246b5138db0f!2sAmrita%20Vishwa%20Vidyapeetham%2C%20Amritapuri!5e0!3m2!1sen!2sin!4v1732611901970!5m2!1sen!2sin"
+                        class="w-100 rounded border" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </section>
+            <!-- Contact Form -->
+            <section class="col-lg-6">
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-primary">Send Us a Message</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message here" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Send Message</button>
-            </form>
-        </section>
+            </section>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2024 Rectrospect-Academy. All Rights Reserved.</p>
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2024 Rectrospect Acadamy. All Rights Reserved.</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
