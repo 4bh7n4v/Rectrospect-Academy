@@ -4,81 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retrospect Academy</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #f0f4f8, #d9e4f5);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: auto;
+        }
+        .passion {
+            font-weight: bold;
+            color: #007BFF;
+        }
+    </style>
 </head>
 <body>
-    <div class="blur-overlay"></div>
+    <nav class="navbar sticky-top bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Rectrospect-Academy</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
 
-    <!-- Top Navigation Menu -->
-    <header class="TopMenu">
-        <img class="Logo" src="../rectro-logo.jpg" alt="Retrospect Logo">
-        <div class="head">Retrospect Academy</div>
-        <nav class="button-container">
-            <a href="../../Function/AboutUs.html" class="NavButton">About Us</a>
-            <a href="../../Function/User-or-Student.html" class="NavButton">Register</a>
-        </nav>
-    </header>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../../../Function/AboutUs.html">About us</a></li>
+                  <li><a class="dropdown-item" href="../../../Function/register.html">Register</a></li>
+                  <li><a class="dropdown-item" href="../../../Function/contact.html">Contact Us</a></li>
+                  <li><a class="dropdown-item" href="../../../Function/Singup_User-Student.html">Signup as Student</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                </ul>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </nav>
 
     <!-- Main Section -->
     <main class="content">
-        <section class="Student-card">
-            <h2 class="section-title">Our Students</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="stimg/s1.jpg" alt="Student Photo">
-                    <div class="card-content">
-                        <h3>John Doe</h3>
-                        <p><strong>Branch:</strong> Computer Science</p>
-                        <p><strong>Year:</strong> 2nd Year</p>
-                        <p><strong>Passion:</strong> <span class="passion">AI & Robotics</span></p>
+        <section class="Student-card py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-4">Our Students</h2>
+                <div class="row g-4">
+                    <!-- Student Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <img src="stimg/s1.jpg" class="card-img-top" alt="Student Photo">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">John Doe</h3>
+                                <p><strong>Branch:</strong> Computer Science</p>
+                                <p><strong>Year:</strong> 2nd Year</p>
+                                <p><strong>Passion:</strong> <span class="passion">AI & Robotics</span></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img src="stimg/s2jpeg.jpeg" alt="Student Photo">
-                    <div class="card-content">
-                        <h3>Jane Smith</h3>
-                        <p><strong>Branch:</strong> Electrical Engineering</p>
-                        <p><strong>Year:</strong> 3rd Year</p>
-                        <p><strong>Passion:</strong> <span class="passion">Sustainability</span></p>
+                    <!-- Student Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <img src="stimg/s2jpeg.jpeg" class="card-img-top" alt="Student Photo">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Jane Smith</h3>
+                                <p><strong>Branch:</strong> Electrical Engineering</p>
+                                <p><strong>Year:</strong> 3rd Year</p>
+                                <p><strong>Passion:</strong> <span class="passion">Sustainability</span></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img src="stimg/s5jpg.jpg" alt="Student Photo">
-                    <div class="card-content">
-                        <h3>Mark Johnson</h3>
-                        <p><strong>Branch:</strong> Mechanical Engineering</p>
-                        <p><strong>Year:</strong> 1st Year</p>
-                        <p><strong>Passion:</strong> <span class="passion">Robotics</span></p>
+                    <!-- Student Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <img src="stimg/s5jpg.jpg" class="card-img-top" alt="Student Photo">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Mark Johnson</h3>
+                                <p><strong>Branch:</strong> Mechanical Engineering</p>
+                                <p><strong>Year:</strong> 1st Year</p>
+                                <p><strong>Passion:</strong> <span class="passion">Robotics</span></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img src="stimg/s4.jpg" alt="Student Photo">
-                    <div class="card-content">
-                        <h3>Jane Doe</h3>
-                        <p><strong>Branch:</strong> Electrical Engineering</p>
-                        <p><strong>Year:</strong> 3rd Year</p>
-                        <p><strong>Passion:</strong> <span class="passion">Fashion</span></p>
+                    <!-- Additional Student Cards -->
+                    <!-- Card 4 -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <img src="stimg/s4.jpg" class="card-img-top" alt="Student Photo">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Jane Doe</h3>
+                                <p><strong>Branch:</strong> Electrical Engineering</p>
+                                <p><strong>Year:</strong> 3rd Year</p>
+                                <p><strong>Passion:</strong> <span class="passion">Fashion</span></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <img src="stimg/s6.jpg" alt="Student Photo">
-                    <div class="card-content">
-                        <h3>Mary Jane</h3>
-                        <p><strong>Branch:</strong> Electrical Engineering</p>
-                        <p><strong>Year:</strong> 3rd Year</p>
-                        <p><strong>Passion:</strong> <span class="passion">Cyber Security</span></p>
+                    <!-- Card 5 -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <img src="stimg/s6.jpg" class="card-img-top" alt="Student Photo">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Mary Jane</h3>
+                                <p><strong>Branch:</strong> Electrical Engineering</p>
+                                <p><strong>Year:</strong> 3rd Year</p>
+                                <p><strong>Passion:</strong> <span class="passion">Cyber Security</span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2024 Retrospect Academy. All rights reserved.</p>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
