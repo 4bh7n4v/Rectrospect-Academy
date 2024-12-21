@@ -7,6 +7,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body,.container{
+            min-width: 320px;
+        }
         .bgimage {
             background-image: url('./Resources/collegematebg.png');
             background-color: black;
@@ -36,6 +39,36 @@
         footer a:hover {
             text-decoration: underline;
         }
+        @media only screen and (max-width: 650px) {
+        .container-fluid {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container-fluid h1 {
+            font-size: 1.5rem;
+            color: #2d4aea;
+            margin-left: 100px;
+        }
+
+        .container-fluid img {
+            width: 40px;
+            height: auto;
+        }
+
+        .container-fluid .btn {
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 50px;
+            margin:  auto;
+        }
+
+        .container-fluid .d-flex {
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+    }
     </style>
 </head>
 <body>
@@ -43,7 +76,7 @@
     <div class="container-fluid bg-light py-3 shadow-sm">
         <div class="d-flex justify-content-between align-items-center">
             <a href="./index.html"><img class="img-fluid" src="./Resources/rectro-logo.jpg" alt="Logo" style="width: 50px; height: auto;"></a>
-            <h1 class="text-center m-0">Retrospect Academy</h1>
+            <h1 class="text-center m-1">Retrospect Academy</h1>
             <div>
                 <a href="./Function/contact.html" class="btn btn-outline-primary me-2">Contact</a>
                 <a href="./Function/AboutUs.html" class="btn btn-outline-primary me-2">About Us</a>
@@ -52,7 +85,6 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
     <div class="bgimage d-flex flex-column align-items-center justify-content-center text-center">
         <h2 class="inpage-title">Discover the college of your dreams with</h2>
         <h2 class="inpage-title">Retrospect-Academy</h2>
@@ -60,29 +92,27 @@
         <!-- Dropdown and Search Section -->
         <div class="container d-flex justify-content-center align-items-center flex-wrap mt-5">
             <div class="dropdown me-3">
-                <label for="branch" class="form-label">College</label><br>
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    Select Option
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="./Drop-Down-Menu/AmritaUniversity/index.html">Amrita University</a></li>
-                    <li><a class="dropdown-item" href="./Drop-Down-Menu/Birla Institute of Technology/index.html">Birla Institute of Technology</a></li>
-                    <li><a class="dropdown-item" href="./Drop-Down-Menu/IIT/index.html">IIT's</a></li>
-                    <li><a class="dropdown-item" href="./Drop-Down-Menu/NIT/index.html">NIT's</a></li>
-                    <li><a class="dropdown-item" href="./Drop-Down-Menu/IIIT/Index.html">IIIT's</a></li>
-                </ul>
+                <label for="universityDropdown" class="form-label">College</label><br>
+                <select id="universityDropdown" class="form-select">
+                    <option value="" disabled selected>Choose University</option>
+                    <option value="./Drop-Down-Menu/AmritaUniversity" id="AmritaUniversity">Amrita University</option>
+                    <option value="./Drop-Down-Menu/Birla Institute of Technology" id="Birla">Birla Institute of Technology</option>
+                    <option value="./Drop-Down-Menu/IIT" id="IIT">IIT's</option>
+                    <option value="./Drop-Down-Menu/NIT" id="NIT">NIT's</option>
+                    <option value="./Drop-Down-Menu/IIIT" id="IIIT">IIIT's</option>
+                </select>
             </div>
 
             <div class="me-3">
-                <label for="branch" class="form-label">Branch</label>
-                <select id="branch" class="form-select">
+                <label for="Course" class="form-label">Branch</label>
+                <select id="Course" class="form-select">
                     <option value="Default">Select-Type</option>
-                    <option value="cse">CSE</option>
-                    <option value="ece">ECE</option>
-                    <option value="eee">EEE</option>
-                    <option value="mech">Mechanical</option>
-                    <option value="civil">Civil</option>
-                    <option value="ai">AI/ML</option>
+                    <option value="cse" id="CSE">CSE</option>
+                    <option value="ece" id="ECE">ECE</option>
+                    <option value="eee" id="EEE">EEE</option>
+                    <option value="mech" id="Mech">Mechanical</option>
+                    <option value="civil" id="Civil">Civil</option>
+                    <option value="ai" id="AI/ML/Cyber/DS">AI/ML/DS</option>
                 </select>
             </div>
 
@@ -90,21 +120,17 @@
                 <label for="year" class="form-label">Year</label>
                 <select id="year" class="form-select">
                     <option value="Default">Select-Year</option>
-                    <option value="1">First</option>
-                    <option value="2">Second</option>
-                    <option value="3">Third</option>
-                    <option value="4">Fourth</option>
+                    <option value="./Resources/Student-info/index.html">First</option>
+                    <option value="./Resources/Student-info/index.html">Second</option>
+                    <option value="./Resources/Student-info/index.html">Third</option>
+                    <option value="./Resources/Student-info/index.html">Fourth</option>
                 </select>
             </div>
         </div>
-
-        <!-- Search Button -->
         <div class="mt-4">
-            <button class="btn btn-primary">Search</button>
+            <button class="btn btn-primary" onclick="collect_data()">Search</button>
         </div>
     </div>
-
-    <!-- How it Works Section -->
     <div class="container my-5">
         <h1 class="text-center">How does Retrospect-Academy Work?</h1>
         <div class="row mt-4">
@@ -156,5 +182,49 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    
+        function collect_data() {
+            // Get the selected elements
+            const university = document.getElementById("universityDropdown");
+            const course = document.getElementById("Course");
+            const year = document.getElementById("year");
+
+            // Get selected values and text
+            const universityValue = university.value; // URL or base path for redirection
+            const courseValue = course.value; // e.g., "cse"
+            const yearValue = year.value; // e.g., "1"
+
+            // Validation for missing selections
+            if (!universityValue) {
+                alert("Please select a University.");
+                return;
+            }
+
+            let targetDirectory = '';
+
+            // Determine the redirection path
+            if (universityValue && courseValue !== "Default" && yearValue !== "Default") {
+                targetDirectory = `${yearValue}`;
+            } else if (universityValue && courseValue !== "Default") {
+                targetDirectory = `${universityValue}/View_College/index.html`;
+            } else if (universityValue) {
+                targetDirectory = `${universityValue}/index.html`;
+            }
+
+            // Optional: Display selections for confirmation/debugging
+            alert(
+                "You have selected:\n" +
+                "University: " + university.options[university.selectedIndex].text + "\n" +
+                "Branch: " + course.options[course.selectedIndex].text + "\n" +
+                "Year: " + year.options[year.selectedIndex].text + "\n" +
+                "Redirecting to: " + targetDirectory
+            );
+
+            // Redirect to the constructed directory
+            window.location.href = targetDirectory;
+    }
+</script>
+    
 </body>
 </html>
