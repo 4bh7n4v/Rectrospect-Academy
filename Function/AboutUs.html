@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css">
+    <style>
+       
 
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: none;
+            background: #073669;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
+   
 
     <div class="container-fluid bg-light py-2">
         <div class="row align-items-center">
@@ -27,6 +46,7 @@
             <!-- Buttons Section -->
             <div class="col-auto">
                 <div class="d-flex gap-2">
+                    <button id="darkModeToggle" class="btn btn-secondary">Toggle Dark Mode</button>
                     <a href="../Function/contact.html" class="btn btn-outline-dark">Contact Us</a>
                     <a href="../Function/AboutUs.html" class="btn btn-outline-dark">About Us</a>
                     <a href="../Function/User-or-Student.html" class="btn btn-outline-dark">SignUp</a>
@@ -45,36 +65,51 @@
     
     <main>
         <!-- About Section -->
-        <section class="py-5 text-center">
+        <section class="py-5 text-center fade-in">
             <div class="container">
                 <h2 class="text-primary">Who We Are</h2>
                 <p class="text-secondary mt-3 mx-auto" style="max-width: 800px;">
-                    At Rectrospect Academy, we are committed to providing students with accurate, transparent, and unbiased reviews about colleges worldwide. Our goal is to simplify your decision-making process by offering real experiences and insights that matter most to you Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores alias, ea, officiis neque quaerat officia quia consequatur temporibus veritatis dolores, optio ex minus porro nulla. At harum quasi dicta repellat.
+                    At Rectrospect Academy, we are committed to providing students with accurate, transparent, and unbiased reviews about colleges worldwide. Our goal is to simplify your decision-making process by offering real experiences and insights that matter most to yoloremu Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique dolorum aliquid facilis atque mollitia, omnis dolores corrupti neque odio temporibus hic voluptas suscipit soluta quos aspernatur tempore dolore, repellat deserunt?
+                    Esse deleniti est maiores placeat velit sint minima qui magni id doloremque fuga, nesciunt amet. Ipsum debitis deserunt vel ex magni maiores et. Facilis aut, cupiditate laudantium mollitia quasi dolores?
+                    Exercitationem blanditiis pariatur at aspernatur deleniti? Amet tempora esse, exercitationem non voluptatem nihil culpa a beatae similique excepturi, illum atque aliquid libero debitis, hic ut. Quos quidem ea laborum perspiciatis!
+                    Nostrum quod, pariatur quam velit obcaecati ullam rerum laudantium temporibus nesciunt laboriosam cupiditate, quia similique ducimus? Labore, consectetur. Tempora doloremque vero asperiores veniam vitae rerum quaerat adipisci excepturi cupiditate maiores!.
                 </p>
             </div>
         </section>
         
         <!-- Values Section -->
-        <section class="bg-light py-5">
-            <div class="container text-center">
-                <h2 class="text-primary mb-4">Our Values</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card shadow-sm p-3 pb-5">
-                            <h3 class="text-primary">Transparency</h3>
-                            <p>We ensure all reviews are honest and authentic.nf  hry rn rfnne.</p>
+        <section class="bg-light py-5 fade-in">
+            <div class="container">
+                <h2 class="text-primary mb-4 text-center">Our Values</h2>
+                <div class="accordion" id="valuesAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#value1">
+                                Transparency
+                            </button>
+                        </h2>
+                        <div id="value1" class="accordion-collapse collapse show">
+                            <div class="accordion-body">We ensure all reviews are honest and authentic.</div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-sm p-3 pb-5">
-                            <h3 class="text-primary">Community</h3>
-                            <p>We believe in empowering students to share and learn from each other.</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#value2">
+                                Community
+                            </button>
+                        </h2>
+                        <div id="value2" class="accordion-collapse collapse">
+                            <div class="accordion-body">We believe in empowering students to share and learn from each other.</div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-sm p-3 pb-5">
-                            <h3 class="text-primary">Excellence</h3>
-                            <p>We strive to provide the best tools and resources for your success.</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#value3">
+                                Excellence
+                            </button>
+                        </h2>
+                        <div id="value3" class="accordion-collapse collapse">
+                            <div class="accordion-body">We strive to provide the best tools and resources for your success.</div>
                         </div>
                     </div>
                 </div>
@@ -82,27 +117,27 @@
         </section>
         
         <!-- Team Section -->
-        <section class="py-5 text-center">
+        <section class="py-5 text-center fade-in">
             <div class="container">
                 <h2 class="text-primary mb-4">Meet the Team</h2>
                 <div class="row g-4 justify-content-center">
                     <div class="col-md-4">
                         <div class="text-center">
-                            <img src="../Resources/Abhinav.jpg" alt="Team Member 1" class="rounded-circle border shadow-sm mb-3" width="150" height="150">
+                            <img src="../Resources/Abhinav.jpg" alt="Team Member 1" class="rounded-circle border shadow-sm mb-3" width="150" height="150" data-bs-toggle="modal" data-bs-target="#teamModal1">
                             <h3 class="h5">Abhinav Pasunuri</h3>
                             <p class="text-muted">Founder & CEO</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="text-center">
-                            <img src="../Resources/Charan.jpg" alt="Team Member 2" class="rounded-circle border shadow-sm mb-3" width="150" height="150">
+                            <img src="../Resources/Charan.jpg" alt="Team Member 2" class="rounded-circle border shadow-sm mb-3" width="150" height="150" data-bs-toggle="modal" data-bs-target="#teamModal2">
                             <h3 class="h5">Sri Charan</h3>
                             <p class="text-muted">Content Manager</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="text-center">
-                            <img src="../Resources/Richu.jpg" alt="Team Member 3" class="rounded-circle border shadow-sm mb-3" width="150" height="150">
+                            <img src="../Resources/Richu.jpg" alt="Team Member 3" class="rounded-circle border shadow-sm mb-3" width="150" height="150" data-bs-toggle="modal" data-bs-target="#teamModal3">
                             <h3 class="h5">Richu James</h3>
                             <p class="text-muted">Co-Founder</p>
                         </div>
@@ -117,6 +152,78 @@
         <p class="mb-0">&copy; 2024 Rectrospect Academy. All Rights Reserved.</p>
     </footer>
 
+    <button class="back-to-top" id="backToTop">↑</button>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        if (localStorage.getItem("darkMode") === "enabled") {
+            document.body.classList.add("dark-mode");
+        }
+        darkModeToggle.addEventListener("click", () => {
+            const isDarkModeEnabled = document.body.classList.toggle("dark-mode");
+            localStorage.setItem("darkMode", isDarkModeEnabled ? "enabled" : "disabled");
+        });
+
+
+        // Back-to-Top Button
+        const backToTop = document.getElementById("backToTop");
+        window.addEventListener("scroll", () => {
+            backToTop.style.display = window.scrollY > 300 ? "flex" : "none";
+        });
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+    
+<style>
+    /* Default Light Theme */
+    body {
+        background-color: #f8f9fa; /* Light background */
+        color: #212529; /* Dark text */
+    }
+
+    .bg-primary {
+        background-color: #007bff !important; /* Primary blue */
+    }
+
+    .btn-secondary {
+        background-color: #6c757d !important; /* Gray button */
+    }
+
+    /* Dark Mode Styles */
+    .dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+    }
+
+    .dark-mode .bg-primary {
+        background-color: #1a73e8 !important; /* Softer blue */
+    }
+
+    .dark-mode .btn-secondary {
+        background-color: #333333 !important; /* Darker button */
+        color: #ffffff;
+    }
+
+    .dark-mode p{
+        color: snow;
+    }
+
+    .dark-mode a {
+        color: #4f2287;
+    }
+
+    .dark-mode .btn-primary {
+        background-color: #824fbf !important;
+        border-color: #32026e !important;
+    }
+
+    .dark-mode .shadow {
+        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    }
+</style>
 </body>
 </html>
