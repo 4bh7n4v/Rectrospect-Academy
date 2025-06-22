@@ -28,7 +28,11 @@
                 <h2>Create Account</h2>
                 <p>Please fill in your details to get started</p>
             </div>
+<<<<<<< Updated upstream
             <form>
+=======
+            <form id="registerForm">
+>>>>>>> Stashed changes
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <input type="text" class="form-control mb-3" id="firstName" name="firstName" placeholder="Enter first name" required>
@@ -47,13 +51,18 @@
                     <input type="password" class="form-control mb-4" id="confirmPassword" name="password" placeholder="Confirm Your Password" required>
                 </div>
                 <div class="form-group">
+<<<<<<< Updated upstream
                     <button class="btn btn-primary w-100 mb-3 " onclick="check()">Sign Up</button>
+=======
+                    <button type="submit" class="btn btn-primary w-100 mb-3">Sign Up</button>
+>>>>>>> Stashed changes
                     <p>Already had an account? <a class="text-decoration-none" href="./User-or-Student.html">Sign In</a></p>
                 </div>
             </form>
         </div>
     </div>
     <script>
+<<<<<<< Updated upstream
         function check() {
             var inputPass = document.getElementById("password").value;
             var confirmPassField = document.getElementById("confirmPassword");
@@ -68,6 +77,49 @@
             }
         }
     </script>
+=======
+    // Newly Added
+    document.getElementById("registerForm").addEventListener("submit", async function(e) {
+    e.preventDefault(); // prevent page reload
+
+    // Get form values
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+
+    // Validation
+    if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    // You can also add: password length check, special characters, etc.
+
+    // Call your API
+    const response = await fetch("http://localhost:5000/api/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+        username: email,        // assuming email is username
+        password: password,
+        firstName: firstName,   // optional: only if backend stores it
+        lastName: lastName
+        })
+    });
+
+    const result = await response.json();
+    alert(result.message);
+
+    // Redirect if successful
+    if (response.ok) {
+        window.location.href = "login.html";
+    }
+    });
+    </script>
+
+>>>>>>> Stashed changes
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

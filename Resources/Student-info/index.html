@@ -29,6 +29,20 @@
             font-weight: bold;
             color: #007BFF;
         }
+        body.dark-mode {
+        background: linear-gradient(120deg, #1a1a1a, #333);
+        color: #f0f4f8;
+        }
+
+        body.dark-mode .card {
+        background-color: #444;
+        color: #f0f4f8;
+        }
+
+        body.dark-mode .footer {
+        background-color: #222;
+        color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -64,8 +78,11 @@
       </nav>
 
     <!-- Main Section -->
+    <button id="darkModeToggle" class="btn btn-secondary" style="position: fixed;z-index: +2; bottom: 100px; right: 20px;">Dark Mode</button>
+    <button id="scrollToTop" class="btn btn-primary" style="position: fixed; bottom: 20px; right: 20px; display: none;z-index: +2;">Scroll Up</button>
     <main class="content">
-        <section class="Student-card py-5">
+        <!-- Dark Mode Toggle Button -->
+    <section class="Student-card py-5">
             <div class="container">
                 <h2 class="section-title text-center mb-4">Our Students</h2>
                 <div class="row g-4">
@@ -143,6 +160,39 @@
     <footer class="footer">
         <p>&copy; 2024 Retrospect Academy. All rights reserved.</p>
     </footer>
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+    
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                darkModeToggle.textContent = 'Toggle Light Mode';
+            } else {
+                darkModeToggle.textContent = 'Toggle Dark Mode';
+            }
+        });
+    
+        // Scroll to Top Functionality
+        const scrollToTopButton = document.getElementById('scrollToTop');
+    
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        };
+    
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+
+
+    </script>
+    
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
